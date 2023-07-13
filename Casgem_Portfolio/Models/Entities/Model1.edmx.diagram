@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a95efbe78dde458a84f8918cc48664da" Name="Diagram1">
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblFeature" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblService" Width="1.5" PointX="2.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblMessage" Width="1.5" PointX="4.75" PointY="0.5" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblReference" Width="1.5" PointX="6.625" PointY="0.5" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblProject" Width="1.5" PointX="8.375" PointY="0.5" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblResume" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblDepartment" Width="1.5" PointX="8.125" PointY="3.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblEmployee" Width="1.5" PointX="10.125" PointY="3.375" />
+        <AssociationConnector Association="CasgemPortfolioModel.FK_TblEmployee_TblDepartment" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblAbout" Width="1.5" PointX="10.25" PointY="0.5" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblScript" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblVideo" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblContact" Width="1.5" PointX="3.375" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

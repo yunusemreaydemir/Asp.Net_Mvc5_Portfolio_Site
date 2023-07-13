@@ -1,0 +1,25 @@
+﻿@model Casgem_Portfolio.Models.Entities.TblContact
+@{
+    ViewBag.Title = "UpdateContact";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>İletişim Güncelleme</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.ContactID)
+
+    <label>Telefon Numarası</label>
+    @Html.TextBoxFor(x => x.TelephoneNumber, new { @class = "form-control" })
+    <br />
+
+    <label>Mail</label>
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.LocationContents, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Güncelle</button>
+</form>
