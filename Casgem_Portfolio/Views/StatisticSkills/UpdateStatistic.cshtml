@@ -1,0 +1,18 @@
+﻿@model Casgem_Portfolio.Models.Entities.TblStatistic
+@{
+    ViewBag.Title = "UpdateStatistic";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+
+<h2>Yetenek Güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.StatisticID)
+    <label>Yetenek Adı</label>
+    @Html.TextBoxFor(x => x.StatisticTitle, new { @class = "form-control" })
+    <br />
+    <label>Yetenek Seviyesi (1-100)</label>
+    @Html.TextBoxFor(x => x.Percentile, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Verileri Güncelle</button>
+</form>

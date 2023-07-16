@@ -36,6 +36,7 @@
     <EntitySetMapping Name="TblReference">
       <EntityTypeMapping TypeName="CasgemPortfolioModel.TblReference">
         <MappingFragment StoreEntitySet="TblReference">
+          <ScalarProperty Name="ReferenceImage" ColumnName="ReferenceImage" />
           <ScalarProperty Name="Job" ColumnName="Job" />
           <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
           <ScalarProperty Name="Mail" ColumnName="Mail" />
@@ -47,6 +48,7 @@
     <EntitySetMapping Name="TblProject">
       <EntityTypeMapping TypeName="CasgemPortfolioModel.TblProject">
         <MappingFragment StoreEntitySet="TblProject">
+          <ScalarProperty Name="ProjectIcon" ColumnName="ProjectIcon" />
           <ScalarProperty Name="ProjectContents" ColumnName="ProjectContents" />
           <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
           <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
@@ -63,40 +65,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="CasgemPortfolioModel.sysdiagrams">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="definition" ColumnName="definition" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="name" ColumnName="name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TblDepartment">
-      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblDepartment">
-        <MappingFragment StoreEntitySet="TblDepartment">
-          <ScalarProperty Name="DepartmenName" ColumnName="DepartmenName" />
-          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TblEmployee">
-      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblEmployee">
-        <MappingFragment StoreEntitySet="TblEmployee">
-          <ScalarProperty Name="EmployeeDepartment" ColumnName="EmployeeDepartment" />
-          <ScalarProperty Name="EmployeeSalary" ColumnName="EmployeeSalary" />
-          <ScalarProperty Name="EmployeeCity" ColumnName="EmployeeCity" />
-          <ScalarProperty Name="EmployeeSurname" ColumnName="EmployeeSurname" />
-          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
-          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="TblAbout">
       <EntityTypeMapping TypeName="CasgemPortfolioModel.TblAbout">
         <MappingFragment StoreEntitySet="TblAbout">
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Cv" ColumnName="Cv" />
           <ScalarProperty Name="AboutContents" ColumnName="AboutContents" />
           <ScalarProperty Name="AboutTitle2" ColumnName="AboutTitle2" />
           <ScalarProperty Name="AboutTitle1" ColumnName="AboutTitle1" />
@@ -126,10 +99,51 @@
     <EntitySetMapping Name="TblContact">
       <EntityTypeMapping TypeName="CasgemPortfolioModel.TblContact">
         <MappingFragment StoreEntitySet="TblContact">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
           <ScalarProperty Name="LocationContents" ColumnName="LocationContents" />
           <ScalarProperty Name="Mail" ColumnName="Mail" />
           <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
           <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblStatistic">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblStatistic">
+        <MappingFragment StoreEntitySet="TblStatistic">
+          <ScalarProperty Name="Percentile" ColumnName="Percentile" />
+          <ScalarProperty Name="StatisticTitle" ColumnName="StatisticTitle" />
+          <ScalarProperty Name="StatisticID" ColumnName="StatisticID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblSkills">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblSkills">
+        <MappingFragment StoreEntitySet="TblSkills">
+          <ScalarProperty Name="Tite2" ColumnName="Tite2" />
+          <ScalarProperty Name="Title1" ColumnName="Title1" />
+          <ScalarProperty Name="SkillsID" ColumnName="SkillsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblSocialMedia">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblSocialMedia">
+        <MappingFragment StoreEntitySet="TblSocialMedia">
+          <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+          <ScalarProperty Name="GitHub" ColumnName="GitHub" />
+          <ScalarProperty Name="LinkedIn" ColumnName="LinkedIn" />
+          <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+          <ScalarProperty Name="Instagram" ColumnName="Instagram" />
+          <ScalarProperty Name="SocialMediaID" ColumnName="SocialMediaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Login">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Admin" ColumnName="Admin" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

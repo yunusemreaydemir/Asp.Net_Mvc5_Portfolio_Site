@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "AddProject";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Bilgi Ekleme</h2>
+
+<form method="post">
+    <label>Başlık</label>
+    <input type="text" class="form-control" name="FeatureTitle" />
+    <br />
+    <label>İçerik</label>
+    <input type="text" class="form-control" name="FeatureDescreption" />
+    <br />
+    <label>Resim URL</label>
+    <input type="text" class="form-control" name="FeatureImageURL" />
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+

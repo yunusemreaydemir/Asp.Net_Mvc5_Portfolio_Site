@@ -1,0 +1,24 @@
+﻿@model Casgem_Portfolio.Models.Entities.TblFeature
+@{
+    ViewBag.Title = "UpdateContact";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Hakkımda Güncelleme</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.FeatureID)
+
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.FeatureTitle, new { @class = "form-control" })
+    <br />
+
+    <label>İçerik</label>
+    @Html.TextBoxFor(x => x.FeatureDescreption, new { @class = "form-control" })
+    <br />
+
+    <label>Resim URL</label>
+    @Html.TextBoxFor(x => x.FeatureImageURL, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>

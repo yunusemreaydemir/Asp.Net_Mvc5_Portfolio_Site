@@ -1,0 +1,31 @@
+﻿@model List<Casgem_Portfolio.Models.Entities.TblSocialMedia>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Sosyal Medya</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Instagram</th>
+        <th>Facebook</th>
+        <th>LinkedIn</th>
+        <th>GitHub</th>
+        <th>Twitter</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SocialMediaID</td>
+            <td>@item.Instagram</td>
+            <td>@item.Facebook</td>
+            <td>@item.LinkedIn</td>
+            <td>@item.GitHub</td>
+            <td>@item.Twitter</td>
+            <td><a href="/SocialMedia/UpdateSocial/@item.SocialMediaID" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+

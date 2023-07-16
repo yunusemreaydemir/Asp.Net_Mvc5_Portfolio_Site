@@ -12,15 +12,10 @@ namespace Casgem_Portfolio.Models.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class TblEmployee
+    public partial class TblStatistic
     {
-        public int EmployeeID { get; set; }
-        public string EmployeeName { get; set; }
-        public string EmployeeSurname { get; set; }
-        public string EmployeeCity { get; set; }
-        public Nullable<decimal> EmployeeSalary { get; set; }
-        public Nullable<int> EmployeeDepartment { get; set; }
-    
-        public virtual TblDepartment TblDepartment { get; set; }
+        public int StatisticID { get; set; }
+        public string StatisticTitle { get; set; }
+        public string Percentile { get; set; }
     }
 }

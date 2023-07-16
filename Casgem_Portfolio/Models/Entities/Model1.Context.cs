@@ -31,12 +31,13 @@ namespace Casgem_Portfolio.Models.Entities
         public virtual DbSet<TblReference> TblReference { get; set; }
         public virtual DbSet<TblProject> TblProject { get; set; }
         public virtual DbSet<TblResume> TblResume { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<TblDepartment> TblDepartment { get; set; }
-        public virtual DbSet<TblEmployee> TblEmployee { get; set; }
         public virtual DbSet<TblAbout> TblAbout { get; set; }
         public virtual DbSet<TblScript> TblScript { get; set; }
         public virtual DbSet<TblVideo> TblVideo { get; set; }
         public virtual DbSet<TblContact> TblContact { get; set; }
+        public virtual DbSet<TblStatistic> TblStatistic { get; set; }
+        public virtual DbSet<TblSkills> TblSkills { get; set; }
+        public virtual DbSet<TblSocialMedia> TblSocialMedia { get; set; }
+        public virtual DbSet<Login> Login { get; set; }
     }
 }

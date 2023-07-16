@@ -129,19 +129,27 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminAboutController.cs" />
     <Compile Include="Controllers\AdminContactController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\ReferenceController.cs" />
+    <Compile Include="Controllers\ResumeController.cs" />
+    <Compile Include="Controllers\ScriptController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
-    <Compile Include="Controllers\StatisticController.cs" />
+    <Compile Include="Controllers\SkillsController.cs" />
+    <Compile Include="Controllers\SocialMediaController.cs" />
+    <Compile Include="Controllers\StatisticSkillsController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entities\Login.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entities\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -158,19 +166,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entities\sysdiagrams.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Entities\TblAbout.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entities\TblContact.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Entities\TblDepartment.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Entities\TblEmployee.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entities\TblFeature.cs">
@@ -192,6 +191,15 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entities\TblService.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entities\TblSkills.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entities\TblSocialMedia.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entities\TblStatistic.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entities\TblVideo.cs">
@@ -296,9 +304,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Templates\sidebar-01\.DS_Store" />
     <Content Include="Templates\sidebar-01\css\.DS_Store" />
@@ -440,6 +445,38 @@
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\AdminContact\Index.cshtml" />
     <Content Include="Views\AdminContact\UpdateContact.cshtml" />
+    <Content Include="Views\AdminContact\AddProject.cshtml" />
+    <Content Include="Views\About\PartialStatistic.cshtml" />
+    <Content Include="Views\About\PartialProject.cshtml" />
+    <Content Include="Views\Contact\Contact.cshtml" />
+    <Content Include="Views\About\PartialAbout.cshtml" />
+    <Content Include="Views\About\PartialSkills.cshtml" />
+    <Content Include="Views\About\PartialSection.cshtml" />
+    <Content Include="Views\Contact\PartialSocialMedia.cshtml" />
+    <Content Include="Views\About\PartialSocialMedia.cshtml" />
+    <Content Include="Views\Portfolio\PartialSocialMedia.cshtml" />
+    <Content Include="Views\Feature\UpdateFeature.cshtml" />
+    <Content Include="Views\Feature\AddProject.cshtml" />
+    <Content Include="Views\Resume\Index.cshtml" />
+    <Content Include="Views\Resume\AddResume.cshtml" />
+    <Content Include="Views\Resume\UpdateResume.cshtml" />
+    <Content Include="Views\Script\Index.cshtml" />
+    <Content Include="Views\Script\AddScript.cshtml" />
+    <Content Include="Views\Script\UpdateScript.cshtml" />
+    <Content Include="Views\Skills\Index.cshtml" />
+    <Content Include="Views\Skills\AddSkills.cshtml" />
+    <Content Include="Views\Skills\UpdateSkills.cshtml" />
+    <Content Include="Views\SocialMedia\Index.cshtml" />
+    <Content Include="Views\SocialMedia\UpdateSocial.cshtml" />
+    <Content Include="Views\StatisticSkills\Index.cshtml" />
+    <Content Include="Views\StatisticSkills\AddStatistic.cshtml" />
+    <Content Include="Views\StatisticSkills\UpdateStatistic.cshtml" />
+    <Content Include="Views\Video\AddVideo.cshtml" />
+    <Content Include="Views\Video\UpdateVideo.cshtml" />
+    <Content Include="Views\Video\Index.cshtml" />
+    <Content Include="Views\AdminAbout\Index.cshtml" />
+    <Content Include="Views\AdminAbout\UpdateAbout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

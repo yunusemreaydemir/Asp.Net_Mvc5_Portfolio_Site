@@ -1,0 +1,29 @@
+﻿@model List<Casgem_Portfolio.Models.Entities.TblStatistic>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+    int count = 0;
+}
+
+<h2>Yetenek Yüzdesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Yetenek Adı</th>
+        <th>Yetenek Seviyesi (1-100)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.StatisticTitle</td>
+            <td>@item.Percentile</td>
+            <td><a href="/StatisticSkills/DeleteStatistic/@item.StatisticID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/StatisticSkills/UpdateStatistic/@item.StatisticID" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/StatisticSkills/AddStatistic/" class="btn btn-primary">Yeni Yetenek Ekle</a>
+

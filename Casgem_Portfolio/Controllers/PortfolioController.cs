@@ -23,7 +23,7 @@ namespace Casgem_Portfolio.Controllers
         {
             return PartialView();
         }
-        public PartialViewResult PartialFeature()
+        public PartialViewResult PartialFeature() //ilk sayfa foto
         {
             ViewBag.featureTitle = db.TblFeature.Select(x => x.FeatureTitle).FirstOrDefault(); //sadece bir veri çekmek istersek firstordefault, birden fazla değer ise tolist kullanabiliriz
             ViewBag.featureDescription = db.TblFeature.Select(x => x.FeatureDescreption).FirstOrDefault();
@@ -51,6 +51,7 @@ namespace Casgem_Portfolio.Controllers
             ViewBag.totalService = db.TblService.Count();
             ViewBag.totalMessage = db.TblMessage.Count();
             ViewBag.totalThanksMessage = db.TblMessage.Where(x => x.MessageSubject == "Teşekkür").Count();
+            ViewBag.happyCustomer = db.TblMessage.Count();
             return PartialView();
         }
 
@@ -60,7 +61,7 @@ namespace Casgem_Portfolio.Controllers
             return PartialView(values);
         }
 
-        public PartialViewResult PartialTestImonial()
+        public PartialViewResult PartialTestImonial() //referanslarım
         {
             var values = db.TblReference.ToList();
             return PartialView(values);
@@ -78,6 +79,16 @@ namespace Casgem_Portfolio.Controllers
         {
             var values = db.TblService.ToList();
             return PartialView(values);
+        }
+
+        public PartialViewResult PartialSocialMedia()
+        {
+            ViewBag.instagram = db.TblSocialMedia.Select(x => x.Instagram).FirstOrDefault();
+            ViewBag.facebook = db.TblSocialMedia.Select(x => x.Facebook).FirstOrDefault();
+            ViewBag.github = db.TblSocialMedia.Select(x => x.GitHub).FirstOrDefault();
+            ViewBag.linkedin = db.TblSocialMedia.Select(x => x.LinkedIn).FirstOrDefault();
+            ViewBag.twitter = db.TblSocialMedia.Select(x => x.Twitter).FirstOrDefault();
+            return PartialView();
         }
     }
 }

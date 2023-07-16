@@ -26,17 +26,14 @@
     <EntitySet Name="TblReference" EntityType="CasgemPortfolioModel.TblReference" />
     <EntitySet Name="TblProject" EntityType="CasgemPortfolioModel.TblProject" />
     <EntitySet Name="TblResume" EntityType="CasgemPortfolioModel.TblResume" />
-    <EntitySet Name="sysdiagrams" EntityType="CasgemPortfolioModel.sysdiagrams" />
-    <EntitySet Name="TblDepartment" EntityType="CasgemPortfolioModel.TblDepartment" />
-    <EntitySet Name="TblEmployee" EntityType="CasgemPortfolioModel.TblEmployee" />
-    <AssociationSet Name="FK_TblEmployee_TblDepartment" Association="CasgemPortfolioModel.FK_TblEmployee_TblDepartment">
-      <End Role="TblDepartment" EntitySet="TblDepartment" />
-      <End Role="TblEmployee" EntitySet="TblEmployee" />
-    </AssociationSet>
     <EntitySet Name="TblAbout" EntityType="CasgemPortfolioModel.TblAbout" />
     <EntitySet Name="TblScript" EntityType="CasgemPortfolioModel.TblScript" />
     <EntitySet Name="TblVideo" EntityType="CasgemPortfolioModel.TblVideo" />
     <EntitySet Name="TblContact" EntityType="CasgemPortfolioModel.TblContact" />
+    <EntitySet Name="TblStatistic" EntityType="CasgemPortfolioModel.TblStatistic" />
+    <EntitySet Name="TblSkills" EntityType="CasgemPortfolioModel.TblSkills" />
+    <EntitySet Name="TblSocialMedia" EntityType="CasgemPortfolioModel.TblSocialMedia" />
+    <EntitySet Name="Login" EntityType="CasgemPortfolioModel.Login" />
   </EntityContainer>
   <EntityType Name="TblMessage">
     <Key>
@@ -56,7 +53,8 @@
     <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ContactNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Job" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Job" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceImage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="TblProject">
     <Key>
@@ -65,6 +63,7 @@
     <Property Name="ProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ProjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="ProjectContents" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="TblResume">
     <Key>
@@ -75,48 +74,6 @@
     <Property Name="Title2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Descreption" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
-  <EntityType Name="TblDepartment">
-    <Key>
-      <PropertyRef Name="DepartmentID" />
-    </Key>
-    <Property Name="DepartmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="DepartmenName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="TblEmployee" Relationship="CasgemPortfolioModel.FK_TblEmployee_TblDepartment" FromRole="TblDepartment" ToRole="TblEmployee" />
-  </EntityType>
-  <EntityType Name="TblEmployee">
-    <Key>
-      <PropertyRef Name="EmployeeID" />
-    </Key>
-    <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="EmployeeSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="EmployeeCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="EmployeeSalary" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="EmployeeDepartment" Type="Int32" />
-    <NavigationProperty Name="TblDepartment" Relationship="CasgemPortfolioModel.FK_TblEmployee_TblDepartment" FromRole="TblEmployee" ToRole="TblDepartment" />
-  </EntityType>
-  <Association Name="FK_TblEmployee_TblDepartment">
-    <End Type="CasgemPortfolioModel.TblDepartment" Role="TblDepartment" Multiplicity="0..1" />
-    <End Type="CasgemPortfolioModel.TblEmployee" Role="TblEmployee" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TblDepartment">
-        <PropertyRef Name="DepartmentID" />
-      </Principal>
-      <Dependent Role="TblEmployee">
-        <PropertyRef Name="EmployeeDepartment" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityType Name="TblAbout">
     <Key>
       <PropertyRef Name="AboutID" />
@@ -125,6 +82,8 @@
     <Property Name="AboutTitle1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="AboutTitle2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="AboutContents" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Cv" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="TblScript">
     <Key>
@@ -151,5 +110,42 @@
     <Property Name="TelephoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="LocationContents" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Age" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblStatistic">
+    <Key>
+      <PropertyRef Name="StatisticID" />
+    </Key>
+    <Property Name="StatisticID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatisticTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Percentile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblSkills">
+    <Key>
+      <PropertyRef Name="SkillsID" />
+    </Key>
+    <Property Name="SkillsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tite2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblSocialMedia">
+    <Key>
+      <PropertyRef Name="SocialMediaID" />
+    </Key>
+    <Property Name="SocialMediaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Instagram" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Twitter" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LinkedIn" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="GitHub" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Facebook" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Admin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

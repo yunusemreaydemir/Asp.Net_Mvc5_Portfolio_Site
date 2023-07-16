@@ -1,0 +1,25 @@
+﻿@model Casgem_Portfolio.Models.Entities.TblSocialMedia
+@{
+    ViewBag.Title = "UpdateSocial";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+<h2>Sosyal Medya Güncelle</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.SocialMediaID)
+    <label>İnstagram</label>
+    @Html.TextBoxFor(x => x.Instagram, new { @class = "form-control" })
+    <br />
+    <label>Facebook</label>
+    @Html.TextBoxFor(x => x.Facebook, new { @class = "form-control" })
+    <br />
+    <label>Twitter</label>
+    @Html.TextBoxFor(x => x.Twitter, new { @class = "form-control" })
+    <br />
+    <label>GitHub</label>
+    @Html.TextBoxFor(x => x.GitHub, new { @class = "form-control" })
+    <br />
+    <label>LinkedIn</label>
+    @Html.TextBoxFor(x => x.LinkedIn, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Verileri Güncelle</button>
+</form>

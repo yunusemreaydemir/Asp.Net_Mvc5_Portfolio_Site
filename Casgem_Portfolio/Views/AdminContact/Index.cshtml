@@ -14,6 +14,8 @@
         <th>Telefon Numarası</th>
         <th>Mail Adresi</th>
         <th>Konum</th>
+        <th>Ad Soyad</th>
+        <th>Yaş</th>
     </tr>
 
     @foreach (var item in Model)
@@ -24,11 +26,13 @@
             <td>@item.TelephoneNumber</td>
             <td>@item.Mail</td>
             <td>@item.LocationContents</td>
+            <td>@item.Name</td>
+            <td>@item.Age</td>
             <td> <a href="/AdminContact/DeleteContact/@item.ContactID" class="btn btn-outline-danger">Sil</a></td>
             <td> <a href="/AdminContact/UpdateContact/@item.ContactID" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>
-<a href="/Project/AddContact/" class="btn btn-primary">İletişim Bilgisi Ekle</a>
+<a href="/AdminContact/AddProject/" class="btn btn-primary">İletişim Bilgisi Ekle</a>
 
 

@@ -19,5 +19,6 @@ namespace Casgem_Portfolio.Models.Entities
         public string Mail { get; set; }
         public string ContactNumber { get; set; }
         public string Job { get; set; }
+        public string ReferenceImage { get; set; }
     }
 }

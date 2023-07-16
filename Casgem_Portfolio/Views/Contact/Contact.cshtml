@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<div class="cont-details">
+    <div class="cont-top">
+        <div class="cont-left text-center">
+            <span class="fa fa-phone text-primary"></span>
+        </div>
+        <div class="cont-right">
+            <h6>İletişim Numarası</h6>
+            <p><a href="tel:+44 99 555 42">@ViewBag.telephoneNumber</a></p>
+        </div>
+    </div>
+    <div class="cont-top margin-up">
+        <div class="cont-left text-center">
+            <span class="fa fa-envelope-o text-primary"></span>
+        </div>
+        <div class="cont-right">
+            <h6>Email</h6>
+            <p><a href="mailto:example@mail.com" class="mail">@ViewBag.eMail</a></p>
+        </div>
+    </div>
+    <div class="cont-top margin-up">
+        <div class="cont-left text-center">
+            <span class="fa fa-map-marker text-primary"></span>
+        </div>
+        <div class="cont-right">
+            <h6>Konum</h6>
+            <p>@ViewBag.locationContents</p>
+        </div>
+    </div>
+</div>

@@ -28,6 +28,8 @@ namespace Casgem_Portfolio.Controllers
             value.TelephoneNumber = p.TelephoneNumber;
             value.Mail = p.Mail;
             value.LocationContents = p.LocationContents;
+            value.Age = p.Age;
+            value.Name = p.Name;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -35,6 +37,19 @@ namespace Casgem_Portfolio.Controllers
         {
             var value = db.TblContact.Find(id);
             db.TblContact.Remove(value);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet] //sayfa yüklenince
+        public ActionResult AddProject()
+        {
+            return View();
+        }
+        [HttpPost] //sayfada butona tıklanınca //parametre vermemiz gerek
+        public ActionResult AddProject(TblContact p)
+        {
+            db.TblContact.Add(p);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -18,5 +18,7 @@ namespace Casgem_Portfolio.Models.Entities
         public string TelephoneNumber { get; set; }
         public string Mail { get; set; }
         public string LocationContents { get; set; }
+        public string Age { get; set; }
+        public string Name { get; set; }
     }
 }

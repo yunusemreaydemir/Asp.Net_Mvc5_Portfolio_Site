@@ -1,0 +1,18 @@
+﻿@model Casgem_Portfolio.Models.Entities.TblSkills
+@{
+    ViewBag.Title = "UpdateSkills";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Hizmet Güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.SkillsID)
+    <label>Hizmet Başlığı</label>
+    @Html.TextBoxFor(x => x.Title1, new { @class = "form-control" })
+    <br />
+    <label>Hizmet İkonu</label>
+    @Html.TextBoxFor(x => x.Tite2, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Verileri Güncelle</button>
+</form>
+

@@ -1,0 +1,14 @@
+﻿@model Casgem_Portfolio.Models.Entities.TblScript
+@{
+    ViewBag.Title = "UpdateScript";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Kayan Yazı Güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.ScriptID)
+    <label>Hizmet Başlığı</label>
+    @Html.TextBoxFor(x => x.Script1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>

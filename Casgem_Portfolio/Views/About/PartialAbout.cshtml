@@ -1,0 +1,53 @@
+﻿@model  Casgem_Portfolio.Models.Entities.TblAbout
+@{
+    Layout = null;
+}
+
+<section class="w3l-aboutblock1" id="about">
+    <div class="midd-w3 py-5">
+        <div class="container py-lg-5 py-md-3">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="position-relative">
+                        <img src="@Model.ImageUrl" alt="" class="radius-image img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 mt-lg-0 mt-5">
+                    <h5 class="title-small mb-2">@Model.AboutTitle1</h5>
+                    <h3 class="title-big"> @Model.AboutTitle2</h3>
+                    <p class="mt-4">
+                        @Model.AboutContents
+                    </p>
+                    <div class="my-info mt-4">
+                        <div class="single-info">
+                            <span>İsim:</span>
+                            <p>@ViewBag.contentsName</p>
+                        </div>
+                        <div class="single-info">
+                            <span>Yaş:</span>
+                            <p>@ViewBag.contentsAge</p>
+                        </div>
+                        <div class="single-info">
+                            <span>Adres:</span>
+                            <p>@ViewBag.contetsLocation</p>
+                        </div>
+                        <div class="single-info">
+                            <span>Email:</span>
+                            <p><a href="mailto:alexander@mail.com">@ViewBag.contentsMail</a></p>
+                        </div>
+                    </div>
+                    <div class="my-social mt-lg-5 mt-4">
+                        <a href="@Model.Cv" class="btn btn-style btn-primary">CV' Mi İndir</a>
+                        <ul class="social m-0 p-0">
+                            <li><a href=@ViewBag.facebook><span class="fa fa-facebook-official"></span></a></li>
+                            <li><a href=@ViewBag.linkedin><span class="fa fa-linkedin-square"></span></a></li>
+                            <li><a href=@ViewBag.instagram><span class="fa fa-instagram"></span></a></li>
+                            <li><a href=@ViewBag.twitter><span class="fa fa-twitter"></span></a></li>
+                            <li><a href=@ViewBag.github><span class="fa fa-github"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

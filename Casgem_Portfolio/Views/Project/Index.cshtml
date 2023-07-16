@@ -13,6 +13,7 @@
         <th>#</th>
         <th>Proje Adı</th>
         <th>Proje İçeriği</th>
+        <th>Proje İkonu</th>
         <th>Sil</th>
         <th>Güncelle</th>
 
@@ -25,6 +26,7 @@
             <td>@count</td>
             <td>@item.ProjectName</td>
             <td>@item.ProjectContents</td>
+            <td>@item.ProjectIcon</td>
             <td> <a href="/Project/DeleteProject/@item.ProjectID" class="btn btn-outline-danger">Sil</a></td>
             <td> <a href="/Project/UpdateProject/@item.ProjectID" class="btn btn-outline-success">Güncelle</a></td>
         </tr>

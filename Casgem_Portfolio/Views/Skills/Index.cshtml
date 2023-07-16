@@ -1,0 +1,29 @@
+﻿@model List<Casgem_Portfolio.Models.Entities.TblSkills>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+    int count = 0;
+}
+
+<h2>Yetenek Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>İçerik</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.Title1</td>
+            <td>@item.Tite2</td>
+            <td><a href="/Skills/DeleteSkills/@item.SkillsID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Skills/UpdateSkills/@item.SkillsID" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/Skills/AddSkills/" class="btn btn-primary">Yeni Hizmet Ekle</a>
+

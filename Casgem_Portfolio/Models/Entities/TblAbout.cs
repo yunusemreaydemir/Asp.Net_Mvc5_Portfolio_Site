@@ -18,5 +18,7 @@ namespace Casgem_Portfolio.Models.Entities
         public string AboutTitle1 { get; set; }
         public string AboutTitle2 { get; set; }
         public string AboutContents { get; set; }
+        public string Cv { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

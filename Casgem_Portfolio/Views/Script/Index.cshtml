@@ -1,0 +1,28 @@
+﻿@model List<Casgem_Portfolio.Models.Entities.TblScript>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Kayan Yazı</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>#</th>
+        <th>Kayan Yazı</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ScriptID</td>
+            <td>@item.Script1</td>
+            <td> <a href="/Script/DeleteScript/@item.ScriptID" class="btn btn-outline-danger">Sil</a></td>
+            <td> <a href="/Script/UpdateScript/@item.ScriptID" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Script/AddScript/" class="btn btn-primary">Kayan Yazı Ekle</a>
+

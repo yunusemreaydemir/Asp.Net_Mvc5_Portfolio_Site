@@ -1,0 +1,26 @@
+﻿@model Casgem_Portfolio.Models.Entities.TblAbout
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Hakkımda Güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.AboutID)
+    <label>Üst Başlık</label>
+    @Html.TextBoxFor(x => x.AboutTitle1, new { @class = "form-control" })
+    <br />
+    <label>Alt Başlık</label>
+    @Html.TextBoxFor(x => x.AboutTitle2, new { @class = "form-control" })
+    <br />
+    <label>İçerik</label>
+    @Html.TextBoxFor(x => x.AboutContents, new { @class = "form-control" })
+    <br />
+    <label>Cv</label>
+    @Html.TextBoxFor(x => x.Cv, new { @class = "form-control" })
+    <br />
+    <label>Resim URL</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Verileri Güncelle</button>
+</form>
